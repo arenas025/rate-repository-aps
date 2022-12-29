@@ -9,6 +9,8 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo/webpack-config": "^0.17.2",
+    "axios": "^1.2.2",
     "expo": "~47.0.9",
     "expo-status-bar": "~1.4.2",
     "react": "18.1.0",
@@ -18,9 +20,28 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@babel/eslint-parser": "^7.19.1",
     "@types/react": "~18.0.14",
     "@types/react-native": "~0.70.6",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-config-standard-jsx": "^11.0.0",
+    "eslint-config-standard-react": "^13.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.31.11",
     "typescript": "^4.6.3"
   },
-  "private": true
+  "private": true,
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": [
+      "standard",
+      "standard-jsx",
+      "standard-react"
+    ],
+    "rules": {
+      "react/prop-types": "off"
+    }
+  }
 }
